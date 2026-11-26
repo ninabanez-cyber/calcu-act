@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Calculator</title>
+    <link rel="stylesheet" href="calcu.css">
+</head>
+<body>
+
+    <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <main class="calculator">
+
+        <header class="header">
+            <div class="logo">✦</div>
+            <div>
+                <h1>Lavender</h1>
+                <p>SMART CALCULATOR</p>
+            </div>
+            <div class="status">●</div>
+        </header>
+
+        <div class="display">
+            <p class="display-label">YOUR CALCULATION</p>
+            <div id="previous"></div>
+            <input type="text" id="result" value="0" readonly>
+
+            <div class="display-bottom">
+                <span>✧ Precision Mode</span>
+                <span>ONLINE</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+
+            <button class="special" onclick="clearDisplay()">AC</button>
+            <button class="special" onclick="deleteNumber()">⌫</button>
+            <button class="special" onclick="appendOperator('%')">%</button>
+            <button class="operator" onclick="appendOperator('/')">÷</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('*')">×</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('-')">−</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+
+            <button class="zero" onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+        </div>
+
+        <footer>
+            <div class="footer-line"></div>
+            <p>MADE WITH <span>♥</span> AND CREATIVITY</p>
+            <small>© 2026 LAVENDER CALCULATOR</small>
+        </footer>
+
+    </main>
+
+    <script src="calcu.js"></script>
+
+</body>
+</html>
